@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 360" version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+	xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+	<defs>
+		<filter id="innershadow" x0="-50%" y0="-50%" width="200%" height="200%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"></feGaussianBlur>
+			<feOffset dy="2" dx="3"></feOffset>
+			<feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
+
+			<feFlood flood-color="#000000" flood-opacity="0.75"></feFlood>
+			<feComposite in2="shadowDiff" operator="in"></feComposite>
+			<feComposite in2="SourceGraphic" operator="over" result="firstfilter"></feComposite>
+
+			<feGaussianBlur in="firstfilter" stdDeviation="3" result="blur2"></feGaussianBlur>
+			<feOffset dy="-2" dx="-3"></feOffset>
+			<feComposite in2="firstfilter" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"></feComposite>
+
+			<feFlood flood-color="#000000" flood-opacity="0.75"></feFlood>
+			<feComposite in2="shadowDiff" operator="in"></feComposite>
+			<feComposite in2="firstfilter" operator="over"></feComposite>
+		</filter>
+
+	</defs>
+	<g transform="matrix(1,0,0,1,-24.1558,-19.6133)">
+		<g transform="matrix(1.22596,0,0,1.22596,-46.064,42.6856)">
+			<path d="M158.437,44.972C177.264,8.32 215.491,-15.992 258.097,-15.992C299.547,-15.992 336.806,7.017 356.132,41.938C378.458,46.686 398.419,60.013 411.257,79.187C448.41,94.129 474.088,130.623 474.093,172C474.093,226.858 428.951,272 374.093,272C374.093,272 158.093,272 158.093,272C103.235,272 58.093,226.858 58.093,171.993C58.1,132.491 81.51,97.323 116.155,81.267C125.45,64.546 140.526,51.624 158.437,44.972Z" style="fill:rgb(4,77,149);" filter="url(#innershadow)"/>
+		</g>
+		<g transform="matrix(1.22596,0,0,1.22596,-46.064,42.6856)">
+			<path d="M172.827,61.496C186.698,27.301 220.3,4.008 258.097,4.008C295.44,4.008 328.643,26.744 342.825,60.188C365.782,61.849 386.764,75.18 397.872,95.625C430.768,105.897 454.089,136.732 454.093,172C454.093,215.887 417.98,252 374.093,252C374.093,252 158.093,252 158.093,252C114.206,252 78.093,215.887 78.093,171.996C78.099,138.081 99.67,108.159 130.767,96.823C138.252,79.032 154.011,65.796 172.827,61.496Z" style="fill:rgb(3,89,175);" filter="url(#innershadow)"/>
+		</g>
+		<g transform="matrix(1.22596,0,0,1.22596,-46.064,42.6856)">
+			<path d="M383.607,112.759C375.93,89.885 352.153,76.162 328.507,80.959C321.434,47.866 291.938,24.008 258.097,24.008C224.601,24.008 195.315,47.382 187.889,80.045C187.289,80.019 186.695,80 186.089,80C166.745,80.005 150.04,94.041 146.7,113.094C118.591,118.534 98.098,143.37 98.093,172C98.093,204.915 125.178,232 158.093,232L374.093,232C407.008,232 434.093,204.915 434.093,172C434.089,142.663 412.572,117.415 383.607,112.759Z" style="fill:rgb(38,130,222);fill-rule:nonzero;" filter="url(#innershadow)"/>
+		</g>
+	</g>
+</svg>
