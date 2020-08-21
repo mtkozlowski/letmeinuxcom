@@ -12,6 +12,9 @@ module.exports = {
     `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-source-wordpress`,
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
