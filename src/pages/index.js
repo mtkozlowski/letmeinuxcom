@@ -16,11 +16,10 @@ const BackToTopLink = styled(Link)`
 
 const IndexPage = ({
   data: {
-    allMdx: { edges },
+    allWpPost: { edges },
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date)
     .map((edge, index) => (
       <BlogTeaser key={edge.node.id} teaserData={edge.node} index={index} />
     ))
@@ -34,7 +33,7 @@ const IndexPage = ({
         <link rel="canonical" href="https://letmeinux.com/" />
       </Helmet>
       <Layout>
-        <Header mostRecentLink={edges[0].node.frontmatter.slug} />
+        <Header mostRecentLink={edges[0].node.slug} />
         <RegularSection id="main-section">
           <BackToTopLink to='/'>Wróć na górę</BackToTopLink>
           {Posts}
@@ -48,19 +47,14 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: { fields: { collection: { eq: "podcast" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
+    allWpPost(sort: {order: DESC, fields: date}) {
       edges {
         node {
+          slug
           id
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            slug
-            title
-            description
-          }
+          date(formatString: "DD/MM/YYYY")
+          title
+          excerpt
         }
       }
     }

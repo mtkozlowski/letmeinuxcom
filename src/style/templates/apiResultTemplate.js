@@ -1,9 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import styled, { css } from "styled-components"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
+import styled from "styled-components"
 
 import { H1, H2, H3 } from "../atoms/Headings"
 import StyledLink from "../atoms/StyledLink"
@@ -92,10 +90,12 @@ export default function Template({ data }) {
             <H2 as={H1}>{wpPost.title}</H2>
             <PostDateBlock>{wpPost.date}</PostDateBlock>
           </DivFlex>
-          <div dangerouslySetInnerHTML={{ __html: wpPost.content }} style={{marginTop: "1.1em"}} />
+        </RegularSection>
+        <RegularSection dangerouslySetInnerHTML={{ __html: wpPost.content }} />
+        <RegularSection>
           <LinkedInLinksWrapper>
-          <HeaderTop>
-            <PageHeader as={ResettedLink} to={"/"}>
+            <HeaderTop>
+              <PageHeader as={ResettedLink} to={"/"}>
                 ZOSTAŃMY W KONTAKCIE
               </PageHeader>
               <Dot />

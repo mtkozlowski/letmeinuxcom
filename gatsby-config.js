@@ -9,36 +9,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
         url: `http://kaczuszka.letmeinux.com/graphql`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 756,
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `podcast`,
-        path: `${__dirname}/content/podcast`,
-      },
-    },
+    }
   ],
 }

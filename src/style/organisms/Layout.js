@@ -5,6 +5,8 @@ import GlobalStyle from "./GlobalStyle"
 import Header from "./Header"
 
 const Main = styled.main`
+  min-height: 100vh;
+  padding-top: 10rem;
 `
 
 const Layout = ({ children }) => (

@@ -45,13 +45,13 @@ const BlogTeaserText = styled.p`
 const BlogTeaser = ({ teaserData, index }) => (
   <BlogTeaserWrapper>
     <BlogTeaserTitle>
-      <StyledLink to={teaserData.frontmatter.slug}>
-        {teaserData.frontmatter.title}
+      <StyledLink to={teaserData.slug}>
+        {teaserData.title}
       </StyledLink>
     </BlogTeaserTitle>
-    <BlogTeaserText>{teaserData.frontmatter.description}</BlogTeaserText>
+    <BlogTeaserText dangerouslySetInnerHTML={{ __html: teaserData.excerpt }} />
     <BlogTeaserDateBlock index={index}>
-      {teaserData.frontmatter.date}
+      {teaserData.date}
     </BlogTeaserDateBlock>
   </BlogTeaserWrapper>
 )
