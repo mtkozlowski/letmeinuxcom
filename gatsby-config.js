@@ -12,7 +12,10 @@ module.exports = {
     `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-wordpress-experimental`,
+      options: {
+        url: `http://kaczuszka.letmeinux.com/graphql`,
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
