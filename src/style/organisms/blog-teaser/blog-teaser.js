@@ -15,7 +15,7 @@ const BlogTeaserWrapper = styled.div`
   margin-bottom: 50px;
 `
 
-const BlogTeaserText = styled.p`
+const BlogTeaserText = styled.div`
   width: 100%;
 
   line-height: 1.2;
