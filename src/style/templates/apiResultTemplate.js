@@ -103,9 +103,9 @@ export default function Template({ data }) {
               <Dot />
             </HeaderTop>
             <LinkedInLinks style={StyledDiv}>
-              <CatalogLink target="_blank" href="//linkedin.com/in/monika-rybinska"><span>Monika Rybińska</span></CatalogLink>
-              <CatalogLink target="_blank" href="//linkedin.com/in/anna-m-michalik"><span>Anna Michalik</span></CatalogLink>
-              <CatalogLink target="_blank" href="//linkedin.com/in/mateusz-w-kozlowski"><span>Mateusz Kozłowski</span></CatalogLink>
+              <CatalogLink target="_blank" href="//linkedin.com/in/monika-rybinska" rel="noopener noreferrer" ><span>Monika Rybińska</span></CatalogLink>
+              <CatalogLink target="_blank" href="//linkedin.com/in/anna-m-michalik" rel="noopener noreferrer" ><span>Anna Michalik</span></CatalogLink>
+              <CatalogLink target="_blank" href="//linkedin.com/in/mateusz-w-kozlowski" rel="noopener noreferrer" ><span>Mateusz Kozłowski</span></CatalogLink>
             </LinkedInLinks>
           </LinkedInLinksWrapper>
         </RegularSection>
