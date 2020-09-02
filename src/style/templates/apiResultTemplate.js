@@ -77,15 +77,19 @@ export default function Template({ data }) {
           property="og:title"
           content={wpPost.title + " - Let me in UX!"}
         />
-        <meta property="og:description" content={wpPost.excerpt} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={wpPost.facebookExcerpt} />
         {wpPost.featuredImage
-          ? <meta property="og:image" content={`${wpPost.featuredImage.node.mediaItemUrl}`} />
+          ? <meta property="og:image" content={wpPost.featuredImage.node.mediaItemUrl} />
           : ""}
+        <meta property="og:image:alt" content={wpPost.title} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <script async src="https://widget.spreaker.com/widgets.js"></script>
       </Helmet>
       <Layout>
         <RegularSection>
-          <StyledLink to="/">Go to main page</StyledLink>
+          <StyledLink to="/">Powrót do strony głównej</StyledLink>
           <DivFlex>
             <H2 as={H1}>{wpPost.title}</H2>
             <PostDateBlock>{wpPost.date}</PostDateBlock>
@@ -121,7 +125,7 @@ export const pageQuery = graphql`
       slug
       title
       date(formatString: "DD/MM/YYYY")
-      excerpt
+      facebookExcerpt
       featuredImage {
         node {
           mediaItemUrl
