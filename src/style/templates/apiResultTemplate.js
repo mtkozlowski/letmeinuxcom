@@ -71,7 +71,7 @@ export default function Template({ data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:url"
-          content={"https://letmeinux.com/" + wpPost.slug}
+          content={"https://letmeinux.com/" + wpPost.slug + "/"}
         />
         <meta
           property="og:title"
