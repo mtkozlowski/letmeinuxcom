@@ -15,6 +15,12 @@ module.exports = {
       options: {
         url: `http://kaczuszka.letmeinux.com/graphql`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-178112226-1",
+      },
+    },
   ],
 }
