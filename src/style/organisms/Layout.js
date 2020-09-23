@@ -8,6 +8,10 @@ import CookieConsent from 'react-cookie-consent';
 const Main = styled.main`
   min-height: 100vh;
   padding-top: 10rem;
+
+  ${({ theme }) => theme.media.phone} {
+    padding-top: 2rem;
+  }
 `
 
 const Layout = ({ children }) => (

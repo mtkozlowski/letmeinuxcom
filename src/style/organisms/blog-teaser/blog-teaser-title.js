@@ -12,6 +12,25 @@ const BlogTeaserTitle = styled(H2)`
     margin-top: 1em;
     line-height: 1.2;
   }
+
+  position: relative;
+
+  &:before {
+    content: "";
+    background: ${({ theme }) => theme.colors.white};
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  a:hover {
+    background: none;
+  }
 `
 
 export default BlogTeaserTitle

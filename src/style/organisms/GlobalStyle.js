@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {margin: 0; font-weight: ${({ theme }) => theme.font.boldFontWeight};
-        &:hover {background-color: ${({ theme }) => theme.colors.darkblue}}
+        &:hover {background-color: ${({ theme }) => theme.colors.white}; color: ${({ theme }) => theme.colors.darkblue}}
     }
 
     html, body {
@@ -73,6 +73,12 @@ const GlobalStyle = createGlobalStyle`
         box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
 
         & + .gatsby-highlight {margin-top: 0;}
+    }
+    
+    .cookie-consent-class {
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 15px auto !important;
     }
 `
 

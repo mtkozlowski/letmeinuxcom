@@ -4,6 +4,7 @@ const Dot = styled.div`
 --radius: 24px;
 border-radius: 50%;
 background-color: ${({ theme }) => theme.colors.purple};
+flex-shrink: 0;
 height: var(--radius);
 width: var(--radius);
 margin-left: var(--radius);
