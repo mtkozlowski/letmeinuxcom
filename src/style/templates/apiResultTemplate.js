@@ -12,6 +12,7 @@ import CatalogLink from '../atoms/CatalogLink';
 import LinkedInLinks from '../atoms/LinkedInLinks';
 import Dot from '../atoms/Dot';
 import ResettedLink from "../atoms/ResettedLink"
+import { ApplePodcastLink, SpotifyLink, AmazonLink, GoogleLink } from "../atoms/CatalogsLinks"
 
 const DivFlex = styled.div`
   display: flex;
@@ -97,6 +98,12 @@ export default function Template({ data }) {
         </RegularSection>
         <RegularSection dangerouslySetInnerHTML={{ __html: wpPost.content }} />
         <RegularSection>
+          <DivFlex>
+            <ApplePodcastLink link="https://podcasts.apple.com/us/podcast/let-me-in-ux/id1526632774?uo=4" text="Apple Podcasts" />
+            <SpotifyLink link="https://open.spotify.com/show/7L90p5HHdi7lb6BvlEk3s9?si=b6r21s0TRtODuoFn4_rwYQ" text="Spotify" />
+            <GoogleLink link="https://www.google.com/podcasts?feed=aHR0cHM6Ly93d3cuc3ByZWFrZXIuY29tL3Nob3cvNDUzMDYxNS9lcGlzb2Rlcy9mZWVk" text="Google Podcasts" />
+            <AmazonLink link="https://music.amazon.com/podcasts/f721ff32-51e2-4cf0-88df-172ec09f86c2/LET-ME-IN-UX" text="Amazon Music" />
+          </DivFlex>
           <LinkedInLinksWrapper>
             <HeaderTop>
               <PageHeader as={ResettedLink} to={"/"}>
