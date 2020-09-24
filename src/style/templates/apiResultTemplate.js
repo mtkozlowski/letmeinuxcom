@@ -3,13 +3,15 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import { H1, H2, H3 } from "../atoms/Headings"
+import { H1, H2, H3, H4, H5, H6 } from "../atoms/Headings"
 import StyledLink from "../atoms/StyledLink"
 import Layout from "../organisms/Layout"
 import RegularSection from "../organisms/RegularSection"
 
 import CatalogLink from '../atoms/CatalogLink';
 import LinkedInLinks from '../atoms/LinkedInLinks';
+import SlackButton from '../atoms/SlackButton';
+
 import Dot from '../atoms/Dot';
 import ResettedLink from "../atoms/ResettedLink"
 import { ApplePodcastLink, SpotifyLink, AmazonLink, GoogleLink } from "../atoms/CatalogsLinks"
@@ -103,6 +105,10 @@ export default function Template({ data }) {
             <SpotifyLink link="https://open.spotify.com/show/7L90p5HHdi7lb6BvlEk3s9?si=b6r21s0TRtODuoFn4_rwYQ" text="Spotify" />
             <GoogleLink link="https://www.google.com/podcasts?feed=aHR0cHM6Ly93d3cuc3ByZWFrZXIuY29tL3Nob3cvNDUzMDYxNS9lcGlzb2Rlcy9mZWVk" text="Google Podcasts" />
             <AmazonLink link="https://music.amazon.com/podcasts/f721ff32-51e2-4cf0-88df-172ec09f86c2/LET-ME-IN-UX" text="Amazon Music" />
+          </DivFlex>
+          <DivFlex style={{backgroundColor: "#eee", color: "#212B38", padding: "1rem", justifyContent: "center", marginTop: "1.6rem", textAlign: "center"}}>
+            <H6>Nurtują Cię jakieś pytania na temat projektowania? Nas też! 🙌 Pisz śmiało na naszej grupie na:</H6>
+            <SlackButton link="https://letmeinux.slack.com/join/shared_invite/zt-hcjqwkok-abSPXKhvvYF0nPim9RB_vQ" text="Slack" />
           </DivFlex>
           <LinkedInLinksWrapper>
             <HeaderTop>
