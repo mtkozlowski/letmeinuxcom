@@ -7,7 +7,7 @@ import CookieConsent from 'react-cookie-consent';
 
 const Main = styled.main`
   min-height: 100vh;
-  padding-top: 10rem;
+  padding-top: 10vh;
 
   ${({ theme }) => theme.media.phone} {
     padding-top: 2rem;
