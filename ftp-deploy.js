@@ -2,6 +2,7 @@ const FtpDeploy = require("ftp-deploy")
 const ftp = require("basic-ftp")
 const basicFtpClient = new ftp.Client()
 const https = require('https');
+const fs = require('fs');
 
 const LOCAL_BUILD_DIRECTORY = "public"
 const DEPLOY_DIRECTORY_NAME = "temp"
@@ -12,6 +13,11 @@ const PRODUCTION_URL = "https://letmeinux.com/"
 const [ host, user, password ] = process.argv.slice(2)
 
 function main() {
+
+  fs.copyFile('./static/.htaccess', './public/.htaccess', (err) => {
+    if (err) throw err;
+    console.log('File was copied to destination');
+  });
 
   return uploadBuildDirectory()
     .catch(error => onError("Upload", error))
