@@ -10,6 +10,11 @@ const Anchor = styled.a`
   margin: 1rem 4px 0 0;
   max-width: 170px;
   position: relative;
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   span {
     position: absolute;
