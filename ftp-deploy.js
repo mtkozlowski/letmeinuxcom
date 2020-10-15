@@ -13,11 +13,10 @@ const PRODUCTION_URL = "https://letmeinux.com/"
 const [ host, user, password ] = process.argv.slice(2)
 
 function main() {
-
-  fs.copyFile('./static/.htaccess', './public/.htaccess', (err) => {
-    if (err) throw err;
-    console.log('File was copied to destination');
-  });
+  fs.copyFile("./static/.htaccess", "./public/.htaccess", err => {
+    if (err) throw err
+    console.log("File was copied to destination")
+  })
 
   return uploadBuildDirectory()
     .catch(error => onError("Upload", error))
@@ -53,7 +52,7 @@ function uploadBuildDirectory(){
   })
 
   ftpDeploy.on("upload-error", data => {
-    console.log(data.err)
+    console.log("data.err: " + data.err + " on: " + data.filename)
     throw new Error("Upload FAILED")
   })
 
