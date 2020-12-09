@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+require("dotenv").config()
 
 module.exports = {
   plugins: [
@@ -20,10 +16,10 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: 'UA-178112226-1',
-          cookieName: 'gatsby-gdpr-google-analytics'
+          trackingId: process.env.GA_TRACKING_ID,
+          cookieName: "gatsby-gdpr-google-analytics",
         },
-        environments: ['production']
+        environments: ["production"],
       },
     },
   ],
